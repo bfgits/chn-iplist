@@ -2,7 +2,7 @@
 // Source: https://github.com/iBug/pac
 // Time: @@TIME@@
 
-var __PROXY__ = 'SOCKS5 localhost:1080'
+var __PROXY__ = 'SOCKS5 192.168.11.4:1080'
 var proxy = __PROXY__;
 var direct = "DIRECT";
 
