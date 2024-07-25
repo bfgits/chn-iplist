@@ -35,8 +35,14 @@ function isLan(ip) {
   return belongsToSubnet(ip, LAN);
 }
 
+
+
 function FindProxyForURL(url, host) {
   // Fallback to IP whitelist
+  if (shExpMatch(host, "*.1password.com")) {
+    return direct;
+  }
+
   var remoteIP = dnsResolve(host);
   if (!remoteIP || remoteIP.indexOf(":") !== -1) {
     // resolution failed or is IPv6 addr
